@@ -83,5 +83,12 @@ body, html {
 .titulo{
   text-align:center;
   margin-top: 155px;
-  margin-left: -60px;
+  margin-bottom: 200px;
+}
+.navbar{
+  position: fixed;
+}
+h2{
+  margin-bottom: 100px;
+  text-align: center;
 }

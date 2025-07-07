@@ -24,17 +24,30 @@
     <a class="nav-link" href="./contato.html">Contatos</a>
   </li>
 </ul>
+<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading1">Sobre</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Tecnologias</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyHeading2">Área de interesse</a>
+    </li>
+  </ul>
+</nav>
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
 <div class="container-sobre">
   <img class="img" src="./imagens/foto-perfil.jpg" alt="foto de perfil">
   <div class="texto-s">
-  <h4 class="subtitulo">Luana Moraes</h4>
-  <p class="sobreMim">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, deleniti ad temporibus,
-    tempore itaque tenetur quaerat minus necessitatibus, accusantium totam nostrum soluta.</p>
+  <h4 class="subtitulo" id="scrollspyHeading1">Luana Moraes</h4>
+  <p class="sobreMim">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, deleniti ad temporibus,</p>
 </div>
 </div>
 <h1 class="titulo">Vendo na Área</h1>
 <div class="container text-center">
-  <h2>Tecnologias</h2>
+  <h2 id="scrollspyHeading2">Tecnologias</h2>
   <div class="row row-cols-2">
     <div class="col"><img class="Icones" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Icone que representa css">
      <h4 class="subtitulo">HTML</h4>
@@ -55,7 +68,7 @@
   </div>
 </div>
 <div class="container text-center">
-  <h2>Área de Interesse</h2>
+  <h2 id="scrollspyHeading3">Área de Interesse</h2>
   <div class="row">
     <div class="col-md-8"><img class="Icones" src="./Icones/ciber.png" alt="Icone que representa cibesegurança">
     <h4 class="subtitulo">CiberSegurança</h4>
@@ -68,5 +81,6 @@
       <p class="sobre-tecnologias">que projeta algumas coisas</p>
     </div>
   </div>
+</div>
 </body>
 </html>
