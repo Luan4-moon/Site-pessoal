@@ -48,3 +48,40 @@ body, html {
 .nav-link:hover{
   color: #A64D79;
 }
+.Icones{
+  width: 45px;
+}
+.container-sobre{
+  display: flex;
+  align-content: center;
+  margin: 50px;
+}
+.img{
+  display: inline;
+  margin-right: 25px;
+  width: 550px;
+  height: 600px;
+  border-radius: 30px;
+  border: #A64D79;
+  border-style: outset;
+  border-width: 3px;
+}
+.texto-s{
+  display: inline;
+  margin-top: 155px;
+  text-align: center;
+}
+.subtitulo{
+  margin-bottom: 30px;
+}
+.container{
+  margin: 125px;
+}
+.sobreMim{
+ margin: 10px;
+}
+.titulo{
+  text-align:center;
+  margin-top: 155px;
+  margin-left: -60px;
+}
