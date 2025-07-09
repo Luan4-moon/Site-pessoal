@@ -8,8 +8,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
            <link rel="icon" href="./Icones/favicon.ico" type="image/x-icon">
             <link rel="stylesheet" href="./style.css">
+            <script src="./Main/main.js" defer></script>
 </head>
 <body>
+  <div id="mensagem" class="alert alert-success d-none mt-3"></div>
     <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Contatos</a>
@@ -27,6 +29,70 @@
     <a class="nav-link" href="./index.html">Apresentação</a>
   </li>
 </ul>
+  <img class="img-fluid" src="./imagens/chuva.jpg" alt="foto de nav">
+<div class="container py-5">
+  <h1 class="formulario">Solicite uma proposta personalizada</h1>
+ <form id="meuFormulario" action="https://formsubmit.co/luana.silvamoraess0@gmail.com" method="POST" novalidate>
+      
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" required />
+        <div class="invalid-feedback">Digite pelo menos 3 letras.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required />
+        <div class="invalid-feedback">Digite um email válido.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="tipoNegocio" class="form-label">Seu Negócio</label>
+        <select class="form-select" id="tipoNegocio" name="tipoNegocio" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option>Empresa de Grande porte</option>
+          <option>Empresa de Médio porte</option>
+          <option>Empresa de Pequeno porte</option>
+          <option>Pessoa Jurídica</option>
+          <option>Pessoal</option>
+        </select>
+        <div class="invalid-feedback">Selecione o tipo de negócio.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="nomeNegocio" class="form-label">Nome do Negócio</label>
+        <input type="text" class="form-control" id="nomeNegocio" name="nomeNegocio" required />
+        <div class="invalid-feedback">Digite o nome do negócio.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select class="form-select" id="estado" name="estado" required>
+          <option value="" disabled selected>Escolha um estado</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+          <!-- Pode colocar todos os estados aqui -->
+        </select>
+        <div class="invalid-feedback">Selecione um estado.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="observacoes" class="form-label">Observações</label>
+        <textarea class="form-control" id="observacoes" name="observacoes" rows="3"></textarea>
+      </div>
+
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+
+      <div id="mensagem" class="alert mt-3 d-none"></div>
+    </form>
+</div>
+<h2 class="redes">Quer ver mais do que eu faço? Me siga por aqui!</h2>
 <div class="container text-center">
   <div class="row">
     <div class="col">
@@ -37,59 +103,11 @@
       <img class="Icones" src="./Icones/instagram.png" alt="instagram">
       <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://www.instagram.com/lua.__sl?igsh=djBkYnpseHVtd285">Instagram</a></p>
     </div>
-  </div>
-</div>
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Nome</label>
-    <input type="email" class="form-control" id="Digite aqui seu nome">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Email</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Digite aqui seu email">
-  </div>
-  <div class="col-12">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Seu Negócio
-      </button>
-      <ul class="dropdown-menu dropdown-menu-dark">
-        <li class="dropdown-item active">Empresa de Grande porte</li>
-        <li class="dropdown-item active">Empresa de Médio porte</li>
-        <li class="dropdown-item active">Empresa de Pequeno porte</li>
-        <li class="dropdown-item active">Pessoal Júridica</li>
-      </ul>
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Nome do Negócio da opção selecionada</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Digite aqui">
+        <div class="col">
+      <img class="Icones" src="./Icones/linkedin.png" alt="Linkedin">
+      <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://www.linkedin.com/in/luana-moraes-b30059358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ">Linkedin</a></p>
     </div>
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
   </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Lembre de mim
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </div>
-</form>
 </body>
 </html>

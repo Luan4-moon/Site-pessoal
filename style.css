@@ -48,9 +48,6 @@ body, html {
 .nav-link:hover{
   color: #A64D79;
 }
-.Icones{
-  width: 45px;
-}
 .img-fluid{
   height: 350px;
   width: 100vw;
@@ -109,4 +106,739 @@ h1{
   margin-top: 150px;
   margin-bottom: 150px;
 }
+.campo:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 0 0 0.25rem rgba(142, 68, 173, 0.25);
+  outline: none;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+.timeline {
+  position: relative;
+  padding: 40px 0;
+  z-index: 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 100%;
+  background: black;
+  box-shadow: 0 0 12px 3px #4b0082cc;
+  border-radius: 8px;
+  z-index: 1;
+}
+.timeline-item:nth-child(odd) {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  z-index: 2;
+  left: 50%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.timeline-item:nth-child(odd) .circle {
+  position: absolute;
+  top: 30px;
+  left: -44px;
+  width: 28px;
+  height: 28px;
+  background: black;
+  border: 3px solid #4b0082;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4b0082;
+  z-index: 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-item:nth-child(odd) .content {
+  margin-left: 40px;
+  background: #f3e8ff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(75, 0, 130, 0.25);
+  color: #301934;
+  position: relative;
+  z-index: 2;
+}
+.timeline-item:nth-child(even) {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  z-index: 2;
+  left: 0;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.timeline-item:nth-child(even) .circle {
+  position: absolute;
+  top: 30px;
+  right: -44px;
+  width: 28px;
+  height: 28px;
+  background: black;
+  border: 3px solid #4b0082;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4b0082;
+  z-index: 3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-item:nth-child(even) .content {
+  margin-right: 40px;
+  background: #f3e8ff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(75, 0, 130, 0.25);
+  color: #301934;
+  position: relative;
+  z-index: 2;
+}
+.timeline-item:hover,
+.timeline-item.active {
+  transform: translateZ(50px) scale(1.05);
+  z-index: 10;
+}
+.timeline-item:hover .circle,
+.timeline-item.active .circle {
+  transform: scale(1.4);
+  z-index: 20;
+}
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+    transform: none;
+    width: 10px;
+  }
+  .timeline-item {
+    width: 100% !important;
+    padding-left: 30px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    left: 0 !important;
+    text-align: left !important;
+    flex-direction: row !important;
+  }
+  .timeline-item .circle {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .timeline-item .content {
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+  }
+}
+.sobre-mim {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 30px;
+  background: #f3e8ff;
+  border: 3px solid #4b0082;
+  border-radius: 50px 20px 50px 20px; /* estilo folha */
+  box-shadow: 0 0 12px #4b0082aa;
+  color: #3b0b66;
+  max-width: 600px;
+  margin: 40px auto;
+}
+.sobre-mim .subtitulo {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.sobre-mim .text-center.md-4 {
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+/* CAIXA MAIOR: fundo cinza claro */
+.container-fluid.text-center {
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
 
+/* GARANTE DUAS COLUNAS EM TELAS MAIORES */
+.row.row-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* ITENS INDIVIDUAIS */
+.row.row-cols-2 .col {
+  
+  background: #fdfaff;
+  border: 2px solid #4b0082;
+  border-radius: 20px;
+  padding: 20px 15px;
+  box-shadow: 0 0 8px rgba(75, 0, 130, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER DESTACANDO */
+.row.row-cols-2 .col:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(75, 0, 130, 0.35);
+  z-index: 10;
+  position: relative;
+}
+
+/* ÍCONES CLICÁVEIS */
+.Icones {
+  width: 60px;
+  height: auto;
+  transition: transform 0.2s ease;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.Icones:active {
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* TÍTULO DE CADA ITEM */
+.subtitulo {
+  color: #3b0b66;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* TEXTO */
+.text-center.md-4 {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* RESPONSIVO PARA MOBILE: VIRA 1 COLUNA */
+@media (max-width: 768px) {
+  .row.row-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+/* Container geral centralizado e com largura máxima */
+.container-fluid.text-center {
+  max-width: 900px;    /* limita largura para ficar mais estreito */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+/* Garante que a row mantenha 2 colunas e fique centralizada */
+.row.row-cols-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza as colunas na linha */
+  gap: 25px;
+}
+
+/* Cada coluna fica com largura fixa, conteúdo centralizado */
+.row.row-cols-2 .col {
+  flex: 0 0 45%;    /* 2 colunas lado a lado com gap */
+  background: #fdfaff;
+  border: 2px solid #4b0082;
+  border-radius: 20px;
+  padding: 20px 15px;
+  box-shadow: 0 0 8px rgba(75,0,130,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row.row-cols-2 .col:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(75,0,130,0.35);
+  position: relative;
+  z-index: 10;
+}
+
+/* Ícones animam ao clicar */
+.Icones {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+}
+
+.Icones:active {
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* Textos */
+.subtitulo {
+  color: #3b0b66;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.text-center.md-4 {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsivo: 1 coluna no mobile */
+@media (max-width: 768px) {
+  .row.row-cols-2 .col {
+    flex: 0 0 100%;
+  }
+}
+/* Container maior para Área de Interesse */
+.container-fluid.text-center {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+/* Faz as rows com colunas ficarem flexíveis e com espaçamento */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Cada coluna da Área de Interesse com caixinha roxa */
+.row > .col {
+  flex: 0 0 45%;
+  background: #fdfaff;
+  border: 2px solid #4b0082;
+  border-radius: 20px;
+  padding: 20px 15px;
+  box-shadow: 0 0 8px rgba(75,0,130,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row > .col:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(75,0,130,0.35);
+  position: relative;
+  z-index: 10;
+}
+
+/* Ícones animam ao clicar */
+.Icones {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+}
+
+.Icones:active {
+  transform: scale(1.3) rotate(10deg);
+}
+
+/* Títulos */
+.subtitulo {
+  color: #3b0b66;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* Textos */
+.text-center.md-4 {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsividade: 1 coluna no mobile */
+@media (max-width: 768px) {
+  .row > .col {
+    flex: 0 0 100%;
+  }
+}
+/* Container do portfólio */
+.container.d-flex.flex-column.align-items-center {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título centralizado e espaçamento */
+.container.d-flex.flex-column.align-items-center h1 {
+  font-size: 2.2rem;
+  color: #3b0b66;
+  margin-bottom: 40px;
+}
+
+/* Cards customizados */
+.custom-card {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(75, 0, 130, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover nas cards para destacar */
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(75, 0, 130, 0.5);
+}
+
+/* Imagens responsivas dentro dos cards */
+.custom-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+}
+
+/* Texto dentro do card */
+.card-body {
+  padding: 20px;
+}
+
+/* Botão estilizado */
+.btn-primary {
+  background-color: #4b0082;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #33005b;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container.d-flex.flex-column.align-items-center {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .custom-img {
+    height: 180px;
+  }
+}
+/* Container geral */
+.container.py-5 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título do formulário */
+.formulario {
+  color: #4b0082;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Inputs, selects, textarea */
+.campo {
+  transition: box-shadow 0.3s ease;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Sombra roxa ao focar */
+.campo:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #4b0082aa;
+  border-color: #4b0082;
+}
+
+/* Botão Enviar */
+.btn-primary {
+  background-color: #4b0082;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-primary:hover {
+  background-color: #33005b;
+}
+
+/* Mensagem de sucesso */
+#mensagem {
+  max-width: 100%;
+  text-align: center;
+  font-weight: 600;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  border-radius: 10px;
+}
+
+/* Título redes sociais */
+.redes {
+  text-align: center;
+  margin: 50px 0 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4b0082;
+}
+
+/* Container das redes sociais */
+.container.text-center {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
+
+/* Linha da grid das redes sociais */
+.container.text-center .row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cada coluna das redes sociais */
+.container.text-center .col {
+  flex: 1 1 100px;
+  max-width: 120px;
+  text-align: center;
+}
+
+/* Ícones das redes */
+.Icones {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Animação ao clicar */
+.Icones:active {
+  transform: scale(1.3) rotate(15deg);
+}
+
+/* Links das redes sociais */
+.container.text-center a {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.container.text-center a:hover {
+  color: #33005b;
+  text-decoration: underline;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 480px) {
+  .container.py-5,
+  .container.text-center {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .container.text-center .row {
+    gap: 25px;
+  }
+}
+/* Caixa cinza arredondada para toda a área das redes sociais */
+.container.text-center {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 30px 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+/* Linha da grid das redes sociais */
+.container.text-center .row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cada coluna das redes sociais */
+.container.text-center .col {
+  flex: 1 1 100px;
+  max-width: 120px;
+  text-align: center;
+}
+
+/* Ícones das redes */
+.Icones {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Animação ao clicar */
+.Icones:active {
+  transform: scale(1.3) rotate(15deg);
+}
+
+/* Links das redes sociais */
+.container.text-center a {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.container.text-center a:hover {
+  color: #33005b;
+  text-decoration: underline;
+}
+/* Caixa cinza arredondada para o formulário */
+.container.py-5 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 25px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.07);
+}
+
+/* Título do formulário */
+.formulario {
+  color: #4b0082;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Inputs, selects, textarea */
+.campo {
+  transition: box-shadow 0.3s ease;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Sombra roxa ao focar */
+.campo:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #4b0082aa;
+  border-color: #4b0082;
+}
+
+/* Botão Enviar */
+.btn-primary {
+  background-color: #4b0082;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-primary:hover {
+  background-color: #33005b;
+}
+
+/* Mensagem de sucesso */
+#mensagem {
+  max-width: 100%;
+  text-align: center;
+  font-weight: 600;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Caixa cinza arredondada para toda a área das redes sociais */
+.container.text-center {
+  max-width: 500px;
+  margin: 40px auto 40px auto;
+  padding: 30px 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+/* Linha da grid das redes sociais */
+.container.text-center .row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cada coluna das redes sociais */
+.container.text-center .col {
+  flex: 1 1 100px;
+  max-width: 120px;
+  text-align: center;
+}
+
+/* Ícones das redes */
+.Icones {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Animação ao clicar */
+.Icones:active {
+  transform: scale(1.3) rotate(15deg);
+}
+
+/* Links das redes sociais - corrigido para todos os links, inclusive Linkedin */
+.container.text-center a,
+.container.text-center a:visited {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.container.text-center a:hover,
+.container.text-center a:focus {
+  color: #33005b;
+  text-decoration: underline;
+}
