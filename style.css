@@ -59,11 +59,14 @@ body, html {
 .text-center{
   margin-top: 35px;
   margin-bottom: 35px;
+
 }
 .titulo{
   text-align: center;
   margin-top: 150px;
   margin-bottom: 100px;
+  color: white;
+  text-shadow: 1px 1px 3px rgb(223, 198, 223); 
 }
 .subtitulo{
   margin-top: 50px;
@@ -109,6 +112,8 @@ h1{
   text-align: center;
   margin-top: 150px;
   margin-bottom: 150px;
+  color: #4B0082;
+  text-shadow: 1px 1px 3px black; 
 }
 .campo:focus {
   border-color: #8e44ad;
@@ -175,7 +180,7 @@ h1{
 }
 .timeline-item:nth-child(odd) .content {
   margin-left: 40px;
-  background: #f3e8ff;
+  background: #fbfffa;
   padding: 15px 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(75, 0, 130, 0.25);
@@ -210,7 +215,7 @@ h1{
 }
 .timeline-item:nth-child(even) .content {
   margin-right: 40px;
-  background: #f3e8ff;
+  background: #fbfffa;
   padding: 15px 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(75, 0, 130, 0.25);
@@ -257,9 +262,9 @@ h1{
   display: inline-block;
   text-align: center;
   padding: 20px 30px;
-  background: #f3e8ff;
+  background: #fbfffa;
   border: 3px solid #4b0082;
-  border-radius: 50px 20px 50px 20px; /* estilo folha */
+  border-radius: 50px 20px 50px 20px;
   box-shadow: 0 0 12px #4b0082aa;
   color: #3b0b66;
   max-width: 600px;
@@ -274,36 +279,28 @@ h1{
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
+  color: #000;
 }
-/* CAIXA MAIOR: fundo cinza claro */
 .container-fluid.text-center {
-  background-color: #f0f0f0;
+  background-color: #fbfffa;
   padding: 40px 20px;
   border-radius: 20px;
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
-
-/* GARANTE DUAS COLUNAS EM TELAS MAIORES */
 .row.row-cols-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
-
-/* ITENS INDIVIDUAIS */
 .row.row-cols-2 .col {
-  
-  background: #fdfaff;
+  background: #813fad;
   border: 2px solid #4b0082;
   border-radius: 20px;
   padding: 20px 15px;
   box-shadow: 0 0 8px rgba(75, 0, 130, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* HOVER DESTACANDO */
 .row.row-cols-2 .col:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 0 20px rgba(75, 0, 130, 0.35);
@@ -316,8 +313,6 @@ h1{
   margin-bottom: 8px;
   font-size: 1.2rem;
 }
-
-/* TEXTO */
 .text-center.md-4 {
   font-size: 0.95rem;
   color: #444;
@@ -325,25 +320,20 @@ h1{
   margin: 0 auto;
   max-width: 90%;
 }
-
-/* RESPONSIVO PARA MOBILE: VIRA 1 COLUNA */
 @media (max-width: 768px) {
   .row.row-cols-2 {
     grid-template-columns: 1fr;
   }
 }
-/* Container geral centralizado e com largura máxima */
 .container-fluid.text-center {
-  max-width: 900px;    /* limita largura para ficar mais estreito */
+  max-width: 900px;    
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px;
-  background-color: #f0f0f0;
+  background-color: #fbfffa;
   border-radius: 20px;
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
 }
-
-/* Garante que a row mantenha 2 colunas e fique centralizada */
 .row.row-cols-2 {
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +355,6 @@ h1{
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .row.row-cols-2 .col:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 0 20px rgba(75,0,130,0.35);
@@ -374,7 +363,7 @@ h1{
 }
 .text-center.md-4 {
   font-size: 0.95rem;
-  color: #444;
+  color: #000000;
   line-height: 1.5;
   max-width: 90%;
   margin: 0 auto;
@@ -389,20 +378,16 @@ h1{
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px;
-  background-color: #f0f0f0;
+  background-color: #fbfffa;
   border-radius: 20px;
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
 }
-
-/* Faz as rows com colunas ficarem flexíveis e com espaçamento */
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
 }
-
-/* Cada coluna da Área de Interesse com caixinha roxa */
 .row > .col {
   flex: 0 0 45%;
   background: #fdfaff;
@@ -563,7 +548,7 @@ h1{
 .campo {
   position: relative;
   z-index: 1;
-  width: 200px;       
+  width: 500px;       
   height: 30px;      
   padding: 5px 10px; 
   border: 1px solid #ccc;
@@ -590,7 +575,7 @@ h1{
   user-select: none;
 }
 .form-select {
-  width: 200px;
+  width: 500px;
   border-radius: 8px;
   display: block;        
   margin: 0 auto;         
@@ -607,8 +592,8 @@ h1{
   text-shadow: 1px 1px 3px rgba(75, 0, 130, 0.4); 
 }
 .formulario {
-  background-color: #f3f3f3; 
-  border: 1px solid purple; 
+  background-color: #fbfffa; 
+  border: 1px solid rgb(77, 1, 77); 
   padding: 20px;
   border-radius: 10px; 
   box-sizing: border-box;
@@ -616,7 +601,7 @@ h1{
 .label {
   display: block;
   margin-bottom: 2px;
-  font-size: 12px;
+  font-size: 20px;
   color: #000; 
   padding-left: 10px; 
   text-shadow: 1px 1px 3px rgba(75, 0, 130, 0.4); 
@@ -624,21 +609,27 @@ h1{
   user-select: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+.invalid{
+  color: red;
+  font-weight: lighter;
+  font-size: 16px;
+}
 .container.text-center {
-  background-color: #f3f3f3; 
-  border: 1px solid purple; 
+  background-color: #fbfffa; 
+  border: 1px solid rgb(77, 1, 77); 
   padding: 20px; 
   border-radius: 10px; 
   box-sizing: border-box;
 }
+/*navs*/
 .nav-tabs {
   background-color: black;
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid rgb(77, 1, 77);
 }
 .nav-tabs .nav-item .nav-link {
   color: white;
   background-color: black;
-  border: 1px solid purple;
+  border: 1px solid rgb(77, 1, 77);
   border-bottom: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -649,7 +640,7 @@ h1{
 .nav-tabs .nav-item .nav-link.active {
   background-color: black;
   color: white;
-  border: 1px solid purple;
+  border: 1px solid rgb(77, 1, 77);
   border-bottom: 2px solid black; 
   font-weight: bold;
 }
