@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mensagem.className = 'alert alert-info mt-3';
     mensagem.classList.remove('d-none');
 
-    // Envia o formulário via método padrão
     form.submit();
   });
 });
+

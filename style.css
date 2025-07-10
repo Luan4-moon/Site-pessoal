@@ -6,6 +6,7 @@
 body, html {
   height: 100%;
   width: 100%;
+  background-color: #000;
 }
 .principal {
   position: relative;
@@ -35,8 +36,11 @@ body, html {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;               
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 .btn:hover{
   background-color: #A64D79;
@@ -111,10 +115,20 @@ h1{
   box-shadow: 0 0 0 0.25rem rgba(142, 68, 173, 0.25);
   outline: none;
 }
+/*curriculo*/
 @media (max-width: 768px) {
   .container {
     padding: 20px;
   }
+}
+.timeline-title {
+  color: white !important;
+  margin-top: 50px;
+  font-size: 32px;
+  text-shadow:
+    0 0 6px #4B0082,
+    0 0 10px #4B0082,
+    0 0 14px #4B0082; 
 }
 .timeline {
   position: relative;
@@ -214,6 +228,7 @@ h1{
   transform: scale(1.4);
   z-index: 20;
 }
+/*sobre*/
 @media (max-width: 768px) {
   .timeline::before {
     left: 8px;
@@ -295,21 +310,6 @@ h1{
   z-index: 10;
   position: relative;
 }
-
-/* ÍCONES CLICÁVEIS */
-.Icones {
-  width: 60px;
-  height: auto;
-  transition: transform 0.2s ease;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.Icones:active {
-  transform: scale(1.3) rotate(10deg);
-}
-
-/* TÍTULO DE CADA ITEM */
 .subtitulo {
   color: #3b0b66;
   font-weight: bold;
@@ -372,28 +372,6 @@ h1{
   position: relative;
   z-index: 10;
 }
-
-/* Ícones animam ao clicar */
-.Icones {
-  width: 60px;
-  height: auto;
-  cursor: pointer;
-  margin-bottom: 15px;
-  transition: transform 0.2s ease;
-}
-
-.Icones:active {
-  transform: scale(1.3) rotate(10deg);
-}
-
-/* Textos */
-.subtitulo {
-  color: #3b0b66;
-  font-weight: bold;
-  margin-bottom: 8px;
-  font-size: 1.2rem;
-}
-
 .text-center.md-4 {
   font-size: 0.95rem;
   color: #444;
@@ -401,14 +379,11 @@ h1{
   max-width: 90%;
   margin: 0 auto;
 }
-
-/* Responsivo: 1 coluna no mobile */
 @media (max-width: 768px) {
   .row.row-cols-2 .col {
     flex: 0 0 100%;
   }
 }
-/* Container maior para Área de Interesse */
 .container-fluid.text-center {
   max-width: 900px;
   margin-left: auto;
@@ -448,29 +423,6 @@ h1{
   position: relative;
   z-index: 10;
 }
-
-/* Ícones animam ao clicar */
-.Icones {
-  width: 60px;
-  height: auto;
-  cursor: pointer;
-  margin-bottom: 15px;
-  transition: transform 0.2s ease;
-}
-
-.Icones:active {
-  transform: scale(1.3) rotate(10deg);
-}
-
-/* Títulos */
-.subtitulo {
-  color: #3b0b66;
-  font-weight: bold;
-  margin-bottom: 8px;
-  font-size: 1.2rem;
-}
-
-/* Textos */
 .text-center.md-4 {
   font-size: 0.95rem;
   color: #444;
@@ -526,77 +478,16 @@ h1{
 .card-body {
   padding: 20px;
 }
-
-/* Botão estilizado */
-.btn-primary {
-  background-color: #4b0082;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #33005b;
-}
-
-/* Responsividade para telas menores */
+/*contatos*/
 @media (max-width: 768px) {
   .container.d-flex.flex-column.align-items-center {
     max-width: 90%;
     padding: 10px;
   }
-
   .custom-img {
     height: 180px;
   }
 }
-/* Container geral */
-.container.py-5 {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Título do formulário */
-.formulario {
-  color: #4b0082;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-/* Inputs, selects, textarea */
-.campo {
-  transition: box-shadow 0.3s ease;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-}
-
-/* Sombra roxa ao focar */
-.campo:focus {
-  outline: none;
-  box-shadow: 0 0 8px 2px #4b0082aa;
-  border-color: #4b0082;
-}
-
-/* Botão Enviar */
-.btn-primary {
-  background-color: #4b0082;
-  border: none;
-  padding: 10px 30px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
-
-.btn-primary:hover {
-  background-color: #33005b;
-}
-
-/* Mensagem de sucesso */
 #mensagem {
   max-width: 100%;
   text-align: center;
@@ -606,8 +497,6 @@ h1{
   border-color: #c3e6cb;
   border-radius: 10px;
 }
-
-/* Título redes sociais */
 .redes {
   text-align: center;
   margin: 50px 0 20px;
@@ -615,93 +504,31 @@ h1{
   font-weight: 700;
   color: #4b0082;
 }
-
-/* Container das redes sociais */
 .container.text-center {
   max-width: 500px;
   margin: 0 auto 40px auto;
 }
-
-/* Linha da grid das redes sociais */
 .container.text-center .row {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 }
-
-/* Cada coluna das redes sociais */
 .container.text-center .col {
   flex: 1 1 100px;
   max-width: 120px;
   text-align: center;
 }
-
-/* Ícones das redes */
-.Icones {
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-bottom: 10px;
-}
-
-/* Animação ao clicar */
-.Icones:active {
-  transform: scale(1.3) rotate(15deg);
-}
-
-/* Links das redes sociais */
-.container.text-center a {
-  color: #4b0082;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.container.text-center a:hover {
-  color: #33005b;
-  text-decoration: underline;
-}
-
-/* Responsivo para telas pequenas */
 @media (max-width: 480px) {
   .container.py-5,
   .container.text-center {
     padding: 10px;
     max-width: 100%;
   }
-
   .container.text-center .row {
     gap: 25px;
   }
 }
-/* Caixa cinza arredondada para toda a área das redes sociais */
-.container.text-center {
-  max-width: 500px;
-  margin: 0 auto 40px auto;
-  padding: 30px 20px;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.05);
-}
-
-/* Linha da grid das redes sociais */
-.container.text-center .row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* Cada coluna das redes sociais */
-.container.text-center .col {
-  flex: 1 1 100px;
-  max-width: 120px;
-  text-align: center;
-}
-
-/* Ícones das redes */
 .Icones {
   width: 60px;
   height: 60px;
@@ -709,35 +536,9 @@ h1{
   transition: transform 0.3s ease;
   margin-bottom: 10px;
 }
-
-/* Animação ao clicar */
 .Icones:active {
   transform: scale(1.3) rotate(15deg);
 }
-
-/* Links das redes sociais */
-.container.text-center a {
-  color: #4b0082;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.container.text-center a:hover {
-  color: #33005b;
-  text-decoration: underline;
-}
-/* Caixa cinza arredondada para o formulário */
-.container.py-5 {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 30px 25px;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.07);
-}
-
-/* Título do formulário */
 .formulario {
   color: #4b0082;
   text-align: center;
@@ -745,22 +546,6 @@ h1{
   font-size: 2rem;
   font-weight: 700;
 }
-
-/* Inputs, selects, textarea */
-.campo {
-  transition: box-shadow 0.3s ease;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-}
-
-/* Sombra roxa ao focar */
-.campo:focus {
-  outline: none;
-  box-shadow: 0 0 8px 2px #4b0082aa;
-  border-color: #4b0082;
-}
-
-/* Botão Enviar */
 .btn-primary {
   background-color: #4b0082;
   border: none;
@@ -772,73 +557,101 @@ h1{
   display: block;
   margin: 0 auto;
 }
-
 .btn-primary:hover {
   background-color: #33005b;
 }
-
-/* Mensagem de sucesso */
-#mensagem {
-  max-width: 100%;
-  text-align: center;
-  font-weight: 600;
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-  border-radius: 10px;
-  margin-top: 15px;
+.campo {
+  position: relative;
+  z-index: 1;
+  width: 200px;       
+  height: 30px;      
+  padding: 5px 10px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+  font-size: 14px;    
+  box-sizing: border-box;
 }
-
-/* Caixa cinza arredondada para toda a área das redes sociais */
+.campo:focus {
+  z-index: 10;
+  outline: none;
+  border-color: #4B0082;
+  box-shadow: 0 2px 6px rgba(75, 0, 130, 0.5);
+}
+.form-label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: #666;
+  padding-left: 10px;
+  margin-left: 0;    
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+.form-select {
+  width: 200px;
+  border-radius: 8px;
+  display: block;        
+  margin: 0 auto;         
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.form-select:hover {
+  background-color: black; 
+  color: white;    
+  cursor: pointer;;     
+}
+.campo:focus + .form-label,
+.campo:focus ~ .form-label {
+  color: #000;
+  text-shadow: 1px 1px 3px rgba(75, 0, 130, 0.4); 
+}
+.formulario {
+  background-color: #f3f3f3; 
+  border: 1px solid purple; 
+  padding: 20px;
+  border-radius: 10px; 
+  box-sizing: border-box;
+}
+.label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: #000; 
+  padding-left: 10px; 
+  text-shadow: 1px 1px 3px rgba(75, 0, 130, 0.4); 
+  cursor: default;
+  user-select: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 .container.text-center {
-  max-width: 500px;
-  margin: 40px auto 40px auto;
-  padding: 30px 20px;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  background-color: #f3f3f3; 
+  border: 1px solid purple; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-sizing: border-box;
+}
+.nav-tabs {
+  background-color: black;
+  border-bottom: 2px solid purple;
+}
+.nav-tabs .nav-item .nav-link {
+  color: white;
+  background-color: black;
+  border: 1px solid purple;
+  border-bottom: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-tabs .nav-item .nav-link:hover {
+  background-color: black; 
+  color: white;
+}
+.nav-tabs .nav-item .nav-link.active {
+  background-color: black;
+  color: white;
+  border: 1px solid purple;
+  border-bottom: 2px solid black; 
+  font-weight: bold;
 }
 
-/* Linha da grid das redes sociais */
-.container.text-center .row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 
-/* Cada coluna das redes sociais */
-.container.text-center .col {
-  flex: 1 1 100px;
-  max-width: 120px;
-  text-align: center;
-}
-
-/* Ícones das redes */
-.Icones {
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-bottom: 10px;
-}
-
-/* Animação ao clicar */
-.Icones:active {
-  transform: scale(1.3) rotate(15deg);
-}
-
-/* Links das redes sociais - corrigido para todos os links, inclusive Linkedin */
-.container.text-center a,
-.container.text-center a:visited {
-  color: #4b0082;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.container.text-center a:hover,
-.container.text-center a:focus {
-  color: #33005b;
-  text-decoration: underline;
-}

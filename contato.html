@@ -29,84 +29,115 @@
     <a class="nav-link" href="./index.html">Apresentação</a>
   </li>
 </ul>
-  <img class="img-fluid" src="./imagens/chuva.jpg" alt="foto de nav">
-<div class="container py-5">
-  <h1 class="formulario">Solicite uma proposta personalizada</h1>
- <form id="meuFormulario" action="https://formsubmit.co/luana.silvamoraess0@gmail.com" method="POST" novalidate>
-      
-      <div class="mb-3">
-        <label for="nome" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="nome" name="nome" required />
-        <div class="invalid-feedback">Digite pelo menos 3 letras.</div>
+<main class="container my-5">
+  <form id="meuFormulario" class="formulario" action="https://formsubmit.co/luana.silvamoraess0@gmail.com" method="POST" novalidate>
+    <h1 class="mb-4 text-center">Envie sua Proposta de Trabalho</h1>
+    <div class="mb-3">
+      <label for="nome" class="label">Nome *</label>
+      <input type="text" class="campo" id="nome" name="nome" minlength="3" required placeholder="Seu nome completo" />
+      <div class="invalid-feedback">Digite pelo menos 3 letras.</div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="label">Email *</label>
+      <input type="email" class="campo" id="email" name="email" required placeholder="exemplo@dominio.com" />
+      <div class="invalid-feedback">Digite um email válido.</div>
+    </div>
+    <div class="mb-3">
+    <label for="tipoNegocio" class="label">Seu Negócio *</label>
+      <select class="form-select" id="tipoNegocio" name="tipoNegocio" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option>Empresa de Grande porte</option>
+        <option>Empresa de Médio porte</option>
+        <option>Empresa de Pequeno porte</option>
+        <option>Pessoa Jurídica</option>
+        <option>Pessoal</option>
+      </select>
+      <div class="invalid-feedback">Selecione o tipo de negócio.</div>
+    </div>
+    <div class="mb-3">
+      <label for="nomeNegocio" class="label">Nome do Negócio *</label>
+      <input type="text" class="campo" id="nomeNegocio" name="nomeNegocio" required placeholder="Nome da sua empresa ou projeto" />
+      <div class="invalid-feedback">Digite o nome do negócio.</div>
+    </div>
+    <div class="mb-3">
+      <label for="estado" class="label">Estado *</label>
+      <select class="form-select" id="estado" name="estado" required>
+        <option value="" disabled selected>Escolha um estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+      <div class="invalid-feedback">Selecione um estado.</div>
+    </div>
+    <div class="mb-3">
+      <label for="descricaoProjeto" class="label">Descrição do Projeto *</label>
+      <textarea class="campo" id="descricaoProjeto" name="descricaoProjeto" rows="5" required placeholder="Conte detalhes sobre o seu projeto, objetivos, tecnologias desejadas..."></textarea>
+      <div class="invalid-feedback">Este campo é obrigatório.</div>
+    </div>
+    <div class="mb-3">
+      <label for="prazo" class="label">Prazo Estimado</label>
+      <input type="text" class="campo" id="prazo" name="prazo" placeholder="Ex: 30 dias" />
+    </div>
+    <div class="mb-3">
+      <label for="arquivo" class="label">Anexar arquivo (opcional)</label>
+      <input type="file" class="campo" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" />
+      <div class="form-label">
+        Arquivos permitidos: PDF, DOC, XLS, TXT, ZIP. Tamanho máximo: 5MB.
       </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required />
-        <div class="invalid-feedback">Digite um email válido.</div>
-      </div>
-
-      <div class="mb-3">
-        <label for="tipoNegocio" class="form-label">Seu Negócio</label>
-        <select class="form-select" id="tipoNegocio" name="tipoNegocio" required>
-          <option value="" disabled selected>Selecione uma opção</option>
-          <option>Empresa de Grande porte</option>
-          <option>Empresa de Médio porte</option>
-          <option>Empresa de Pequeno porte</option>
-          <option>Pessoa Jurídica</option>
-          <option>Pessoal</option>
-        </select>
-        <div class="invalid-feedback">Selecione o tipo de negócio.</div>
-      </div>
-
-      <div class="mb-3">
-        <label for="nomeNegocio" class="form-label">Nome do Negócio</label>
-        <input type="text" class="form-control" id="nomeNegocio" name="nomeNegocio" required />
-        <div class="invalid-feedback">Digite o nome do negócio.</div>
-      </div>
-
-      <div class="mb-3">
-        <label for="estado" class="form-label">Estado</label>
-        <select class="form-select" id="estado" name="estado" required>
-          <option value="" disabled selected>Escolha um estado</option>
-          <option value="SP">São Paulo</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="MG">Minas Gerais</option>
-          <!-- Pode colocar todos os estados aqui -->
-        </select>
-        <div class="invalid-feedback">Selecione um estado.</div>
-      </div>
-
-      <div class="mb-3">
-        <label for="observacoes" class="form-label">Observações</label>
-        <textarea class="form-control" id="observacoes" name="observacoes" rows="3"></textarea>
-      </div>
-
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="table" />
-
-      <div class="d-grid">
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </div>
-
-      <div id="mensagem" class="alert mt-3 d-none"></div>
-    </form>
-</div>
-<h2 class="redes">Quer ver mais do que eu faço? Me siga por aqui!</h2>
+    </div>
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_template" value="table" />
+    
+    <div class="d-grid mt-4">
+      <button type="submit" class="btn btn-primary btn-lg">Enviar Proposta</button>
+    </div>
+  </form>
+</main>
 <div class="container text-center">
+<h2 class="redes">Quer ver mais do que eu faço? Me siga por aqui!</h2>
   <div class="row">
     <div class="col">
-      <img class="Icones" src="./Icones/github.png" alt="Github">
-      <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://github.com/Luan4-moon">GitHub</a></p>
-    </div>
-    <div class="col">
-      <img class="Icones" src="./Icones/instagram.png" alt="instagram">
-      <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://www.instagram.com/lua.__sl?igsh=djBkYnpseHVtd285">Instagram</a></p>
-    </div>
-        <div class="col">
-      <img class="Icones" src="./Icones/linkedin.png" alt="Linkedin">
-      <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="https://www.linkedin.com/in/luana-moraes-b30059358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ">Linkedin</a></p>
-    </div>
+  <a href="https://github.com/Luan4-moon" class="link-offset-2 link-underline link-underline-opacity-0" href="https://www.instagram.com/lua.__sl?igsh=djBkYnpseHVtd285">
+    <img class="Icones" src="./Icones/github.png" alt="Github">
+    <p>GitHub</p>
+  </a>
+</div>
+<div class="col">
+  <a href="https://www.instagram.com/lua.__sl?igsh=djBkYnpseHVtd285" class="link-offset-2 link-underline link-underline-opacity-0" >
+    <img class="Icones" src="./Icones/instagram.png" alt="instagram">
+    <p>Instagram</p>
+  </a>
+</div>
+<div class="col">
+  <a href="https://www.linkedin.com/in/luana-moraes-b30059358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="link-offset-2 link-underline link-underline-opacity-0">
+    <img class="Icones" src="./Icones/linkedin.png" alt="Linkedin">
+    <p>Linkedin</p>
+  </a>
+</div>
   </div>
   </div>
 </body>
