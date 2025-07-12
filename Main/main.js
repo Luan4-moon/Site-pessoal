@@ -44,33 +44,46 @@ document.addEventListener('DOMContentLoaded', () => {
       const nomeNegocio = form.nomeNegocio;
       const estado = form.estado;
 
+      // Esconde mensagens e remove estilos de erro
       [nome, email, tipoNegocio, nomeNegocio, estado].forEach(input => {
-        input.classList.remove('is-invalid');
+        input.classList.remove('invalid');
+        const erroMsg = input.parentElement.querySelector('.invalid');
+        if (erroMsg) erroMsg.style.display = 'none';
       });
 
       if (nome.value.trim().length < 3) {
-        nome.classList.add('is-invalid');
+        nome.classList.add('invalid');
+        const erroMsg = nome.parentElement.querySelector('.invalid');
+        if (erroMsg) erroMsg.style.display = 'block';
         valido = false;
       }
 
       const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!regexEmail.test(email.value.trim())) {
-        email.classList.add('is-invalid');
+        email.classList.add('invalid');
+        const erroMsg = email.parentElement.querySelector('.invalid');
+        if (erroMsg) erroMsg.style.display = 'block';
         valido = false;
       }
 
       if (!tipoNegocio.value) {
-        tipoNegocio.classList.add('is-invalid');
+        tipoNegocio.classList.add('invalid');
+        const erroMsg = tipoNegocio.parentElement.querySelector('.invalid');
+        if (erroMsg) erroMsg.style.display = 'block';
         valido = false;
       }
 
       if (nomeNegocio.value.trim().length < 3) {
-        nomeNegocio.classList.add('is-invalid');
+        nomeNegocio.classList.add('invalid');
+        const erroMsg = nomeNegocio.parentElement.querySelector('.invalid');
+        if (erroMsg) erroMsg.style.display = 'block';
         valido = false;
       }
 
       if (!estado.value) {
-        estado.classList.add('is-invalid');
+        estado.classList.add('invalid');
+        const erroMsg = estado.parentElement.querySelector('.invalid');
+        if (erroMsg) erroMsg.style.display = 'block';
         valido = false;
       }
 
@@ -89,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
 // Scroll suave em âncoras internas
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", function (e) {
@@ -114,11 +126,11 @@ if (img) {
 }
 
 // Botão com efeito 3D
-const btn = document.querySelector('.btn');
+const btn = document.querySelectorAll('.btn');
 if (btn) {
   btn.style.transition = 'transform 0.5s ease';
 
-  btn.addEventListener('mouseenter', () => {
+  btn.addEventListenerAll('mouseenter', () => {
     btn.style.transform = 'translateY(-5px) rotateX(10deg)';
   });
 
