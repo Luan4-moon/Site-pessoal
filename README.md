@@ -15,6 +15,6 @@ Aqui mostro um pouco do que aprendi, do que gosto e pra onde quero ir.
 
 Mostra a evolução das minhas habilidades, criando um primeiro site pessoal simples.
 
-🔗👀 Link para o site:
+🔗👀 Link para o site para ver de perto : https://luan4-moon.github.io/Site-pessoal/
 
 > Projeto pessoal em constante evolução. Tipo eu.
