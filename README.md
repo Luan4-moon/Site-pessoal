@@ -1,6 +1,6 @@
 🌙 Site Pessoal - Luana Moraes
 
-Bem-vind@ ao meu cantinho na web!  
+Bem-vindx ao meu cantinho na web!  
 Este é meu portfólio pessoal, feito com carinho, código e umas boas doses de tentativa e erro.
 Aqui mostro um pouco do que aprendi, do que gosto e pra onde quero ir.
 
