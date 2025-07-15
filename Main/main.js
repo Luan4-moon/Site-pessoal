@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mensagem.classList.remove('d-none');
         return;
       }
-      mensagem.textContent = 'Enviando formulário...';
+      mensagem.textContent = 'Enviado formulário';
       mensagem.className = 'alert alert-info mt-3';
       mensagem.classList.remove('d-none');
       form.submit();
